@@ -1,0 +1,13 @@
+effect,label,type
+log_grizzly_pop_est_scaled,Bear abundance,spatial
+log_humanpop_scaled,Human abundance,spatial
+mean_temp_scaled,Mean temperature,spatial
+total_log_precip_scaled,Precipitation ,spatial
+year_centered,Year,annual
+offset(log(gbpu_usable_area)),Offset,NA
+salmon_biomass_geo_mean,Salmon biomass,annual
+prev_3yr_conflict_scaled,Recent conflict kills,annual
+log_annual_precip_scaled,Precipitation ,annual
+mean_annual_temp_scaled,Mean temperature,annual
+prev_3yr_scaled,Recent hunting kills,annual
+salmon_estimatedTRUE,Salmon present,spatial

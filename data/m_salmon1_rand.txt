@@ -1,0 +1,36 @@
+
+Call:
+glmmadmb(formula = late_kills ~ salmon_biomass_geo_mean + prev_3yr_scaled + 
+    prev_3yr_conflict_scaled + mean_annual_temp_scaled + log_annual_precip_scaled + 
+    mean_temp_scaled + total_log_precip_scaled + year_centered + 
+    log_humanpop_scaled + log_grizzly_pop_est_scaled + offset(log(gbpu_usable_area)), 
+    data = conflict_salmon, family = "nbinom", random = ~(1 | 
+        gbpu), verbose = TRUE)
+
+AIC: 1174.6 
+
+Coefficients:
+                            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                -24.36672    0.18989 -128.32   <2e-16 ***
+salmon_biomass_geo_mean     -0.43011    0.15575   -2.76   0.0058 ** 
+prev_3yr_scaled             -0.11122    0.16665   -0.67   0.5045    
+prev_3yr_conflict_scaled     0.29844    0.16278    1.83   0.0667 .  
+mean_annual_temp_scaled      0.58002    0.47263    1.23   0.2197    
+log_annual_precip_scaled     0.21298    0.52218    0.41   0.6834    
+mean_temp_scaled             0.76975    0.87425    0.88   0.3786    
+total_log_precip_scaled     -1.15044    1.02170   -1.13   0.2602    
+year_centered                0.02112    0.00988    2.14   0.0325 *  
+log_humanpop_scaled         -0.11500    0.53042   -0.22   0.8284    
+log_grizzly_pop_est_scaled   0.30499    0.65646    0.46   0.6422    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Number of observations: total=682, gbpu=22 
+Random effect variance(s):
+Group=gbpu
+            Variance StdDev
+(Intercept)    0.581 0.7622
+
+Negative binomial dispersion parameter: 0.73054 (std. err.: 0.14184)
+
+Log-likelihood: -574.323 
